@@ -3,39 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Formulario</title>
 </head>
 <body>
 <form>
+    <h2>Cadastro de Funcionário:</h2>
+    <div id="principal">
     <div>
         <label for="Nome">Nome do funcionário:</label>
     </div>
     <div>
-    <input type="text" id="Nome">
+    <input type="text" id="Nome" required>
     </div>
     <div>
         <label for="CPF">CPF:</label>
     </div>
     <div>
-        <input type="number" id="CPF">
+        <input type="text" id="CPF"  maxlength="11" required>
     </div>
     <div>
         <label for="RG">RG:</label>
     </div>
     <div>
-        <input type="number" id="RG">
+        <input type="text" id="RG" maxlenght="9" required>
     </div>
     <div>
         <label for="Nascimento">Data de nascimento:</label>
     </div>
     <div>
-        <input type="number" id="Nascimento">
+        <input type="text" id="Nascimento" required>
     </div>
     <div>
         <label for="CNH">Tipo da CNH:</label>
     </div>
     <div>
-        <select id="CNH">
+        <select id="CNH" required>
             <option value="opção0">Selecione...</option>
             <option value="opção1">Tipo A</option>
             <option value="opção2">Tipo B</option>
@@ -45,7 +48,7 @@
     <label for="estado civil">Estado civil:</label>
     </div>
     <div>
-        <select id="estado civil">
+        <select id="estado civil" required>
             <option value="opção0">Selecione...</option>
             <option value="opção1">Solteiro(a)</option>
             <option value="opção2">Casado(a)</option>
@@ -58,44 +61,52 @@
         <label for="CEP">CEP:</label>
     </div>
     <div>
-        <input type="number" id="CEP">
+        <input type="text" id="CEP" required>
     </div>
     <div>
         <label for="endereço">Endereço:</label>
     </div>
     <div>
-        <input type="text" id="endereço">
+        <input type="text" id="endereço" required>
     </div>
     <div>
         <label for="bairro">Bairro:</label>
     </div>
     <div>
-        <input type="text" id="bairro">
+        <input type="text" id="bairro" required>
     </div>
     <div>
         <label for="cidade">Cidade:</label>
     </div>
     <div>
-        <input type="text" id="cidade">
+        <input type="text" id="cidade" required>
     </div>
     <div>
         <label for="estado">Estado:</label>
     </div>
     <div>
-        <input type="text" id="estado">
+        <input type="text" id="estado" required>
     </div>
     <div>
         <label for="numero">Número:</label>
     </div>
     <div>
-        <input type="number" id="numero">
+        <input type="text" id="numero" required>
     </div>
     <div>
         <label for="complemento">Complemento:</label>
     </div>
     <div>
-        <input type="text" id="complemento">
+        <input type="text" id="complemento" required>
+    </div>
     </div>
     </form>
+    <div>
+        <button id="btnSalvar">Salvar</button>
+      
+          </div>
+        
+<script src="script.js"></script>
+
 </body>
 </html>

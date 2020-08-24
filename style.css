@@ -1,0 +1,51 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1em;
+    background-color:  whitesmoke;
+    
+
+}
+h2{
+
+    font-family:cursive;
+ 
+}
+form {
+    position: absolute;
+    top: 1em;
+    left: 30em;
+
+}
+
+#principal { 
+    padding: 3em 4em;
+    box-shadow: 10px 10px 10px #888888;
+    border: 1px solid black;
+    border-radius: 1em;
+    background-color:  whitesmoke;
+    
+   
+}
+
+input:invalid {
+    border: 1px solid red;
+
+}
+input:valid {
+    border: 1px solid green;
+    
+}
+input,select {
+    border-radius: 2em;
+}
+
+#btnSalvar {
+    padding: 1em 1em;
+      position: absolute;
+      left: 80%;
+      top: 55em;
+      border: solid 2px gray;
+      border-radius: 2em;
+      cursor: pointer;
+      
+}
