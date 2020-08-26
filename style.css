@@ -8,12 +8,15 @@ body {
 h2{
 
     font-family:cursive;
+    position: absolute;
+    bottom: 95%;
+    left: 20%;
  
 }
 form {
     position: absolute;
-    top: 1em;
-    left: 30em;
+    top: 10%;
+    left: 30%;
 
 }
 
@@ -37,13 +40,14 @@ input:valid {
 }
 input,select {
     border-radius: 2em;
+    margin: 2.5px;
 }
 
 #btnSalvar {
     padding: 1em 1em;
       position: absolute;
       left: 80%;
-      top: 55em;
+      top: 86%;
       border: solid 2px gray;
       border-radius: 2em;
       cursor: pointer;
