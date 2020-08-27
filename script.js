@@ -1,6 +1,9 @@
 document.getElementById('btnSalvar').addEventListener('click',() => {
   if (document.querySelectorAll(':invalid').length > 0) {
          alert ("Os campos obrigatórios não foram preenchidos.")
+   } else {
+     document.querySelectorAll(':valid')
+     alert ("Salvo com sucesso")
    }
  })
 
@@ -63,10 +66,42 @@ function buscaDadosCep(CEP) {
       var dadosJSONTXT = reqCep.responseText
       var dadosJSONOBJ = JSON.parse(dadosJSONTXT)
 
-      document.getElementById("endereço").value= dadosJSONOBJ.logradouro
+      document.getElementById("rua").value= dadosJSONOBJ.logradouro
       document.getElementById("bairro").value= dadosJSONOBJ.bairro
 
     }
   }
   reqCep.send()
 }
+
+const fields = {
+  "nome": nome.value,
+  "CPF": cpf.value,
+  "RG": rg.value,
+  "data_nasc": data.value,
+  "tipo_cnh": cnh.value,
+  "estado_civil": civil.value,
+  "CEP": cep.value,
+  "rua": rua.value,
+  "bairro": bairro.value,
+  "cidade": cidade.value,
+  "estado": estado.value,
+  "numero": numero.value,
+  "complemento": complemento.value
+}
+
+let fieldsJSON = JSON.stringify(fields)
+
+const xhr = new XMLHttpRequest ()
+xhr.open("POST","https://beginner-api.herokuapp.com/save")
+xhr.setRequestHeader("Content-Type", "application/json")
+
+xhr.onreadystatechange = function () {
+  if(this.readyState == 4 && this.status == 200) {
+    var POST = JSON.parse(xhr.responseText)
+
+  }
+
+xhr.send(fieldsJSON)
+}
+
